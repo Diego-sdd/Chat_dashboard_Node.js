@@ -1,0 +1,60 @@
+html,
+body {
+    background:#04D361;
+    font-family: Abel, Arial, Verdana, sans-serif;
+}
+.card {
+    width: 450px;
+    height: 520px;
+    background-color:#131217;
+  
+    box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card h3 {
+    text-align: center !important;
+}
+
+.card #additional {
+    position: absolute;
+    width: 0px;
+    height: 100%;
+    background: linear-gradient(rgb(38, 95, 141), rgb(116, 143, 235));
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card.green #additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+
+.card #additional .user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.card #additional .user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(65, 64, 64, 0.025);
+
+}
+.form-cadastro{
+    margin:25px;
+}
