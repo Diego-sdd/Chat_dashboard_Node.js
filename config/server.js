@@ -3,6 +3,9 @@ var express = require('express');
 
 objectId = require('mongodb').ObjectId;
 
+var sweetalert2 = require('sweetalert2'); 
+
+var app = sweetalert2();
 /* importar o módulo do consign */
 var consign = require('consign');
 
@@ -30,6 +33,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 /* configurar o middleware express-validator */
 app.use(expressValidator());
+
 
 /* configura o middleware express-session */
 app.use(expressSession({

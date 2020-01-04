@@ -25,6 +25,7 @@ module.exports.cadastrar_usuario = function(application, req, res){
 	req.assert('ds_email', 'email').notEmpty();
 	
 	req.assert('ds_perfil', 'Adicione aluno professor').notEmpty();
+
 	
 
 	var erros = req.validationErrors();

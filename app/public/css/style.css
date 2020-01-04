@@ -5,7 +5,7 @@ body {
 }
 .card {
     width: 450px;
-    height: 520px;
+    height: 570px;
     background-color:#131217;
   
     box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.4);
@@ -26,7 +26,7 @@ body {
     position: absolute;
     width: 0px;
     height: 100%;
-    background: linear-gradient(rgb(38, 95, 141), rgb(116, 143, 235));
+    background: #568EA9;
     transition: width 0.4s;
     overflow: hidden;
     z-index: 2;

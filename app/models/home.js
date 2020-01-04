@@ -41,6 +41,8 @@ JogoDAO.prototype.dados = function (res, ds_email, msg) {
 	this._connection.open(function (err, mongoclient) {
 		mongoclient.collection("users_01", function (err, collection) {
 			collection.find({ usuario: ds_email }).toArray(function (err, result) {
+				
+				console.log(result.ds_perfil);
 				res.render("dados", { jogo: result, msg: msg });
 				mongoclient.close();
 			});

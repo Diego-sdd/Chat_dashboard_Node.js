@@ -1,15 +1,22 @@
+
 function UsuariosDAO(connection){
 	this._connection = connection();
 	
 }
 
-UsuariosDAO.prototype.inserirUsuario = function(usuario){
+
+UsuariosDAO.prototype.inserirUsuario = function(usuario, req){
+
+	
+
 	this._connection.open( function(err, mongoclient){
 		mongoclient.collection("users", function(err, collection){
 			collection.insert(usuario);
 			mongoclient.close();
 		});
 	});
+
+
 }
 
 UsuariosDAO.prototype.autenticar = function(usuario, req, res){
@@ -28,7 +35,9 @@ UsuariosDAO.prototype.autenticar = function(usuario, req, res){
 
 				if(req.session.autorizado){
 					res.redirect("home");
-				} else {
+				
+				} 
+				else {
 					req.assert('', 'Login ou senha incorreto').notEmpty();
 	
 					var erro = req.validationErrors();

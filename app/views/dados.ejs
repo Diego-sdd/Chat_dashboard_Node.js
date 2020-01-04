@@ -2,11 +2,25 @@
           
     <!-- ./col -->
     <div class="col-md-6">
+      
       <!-- small box -->
       <div class="small-box bg-green">
         <div class="inner">
-          <h3>5</h3>
-          <p>Alunos</p>
+          <% var cont = 0;
+           var valoraluno = -1;
+          %>
+          <% for(var i = 0; i < jogo.length; i++) { %>
+            
+            <% 
+            if(jogo[i].ds_perfil == "Aluno"){
+              
+              var valoraluno = cont++;
+            }%>
+            
+          <% } 
+          %>
+          <h3>  <%=valoraluno+1;%> </h3>
+          <p>Quantidade de Alunos cadastrado</p>
         </div>
         <div class="icon">
           <i class="ion ion-person-add"></i>
@@ -18,9 +32,21 @@
       <!-- small box -->
       <div class="small-box bg-yellow">
         <div class="inner">
-          <h3>15</h3>
-  
-          <p>Administradores</p>
+          <% var cont = 0;
+          var valorprof = -1;
+          %>
+          <% for(var i = 0; i < jogo.length; i++) { %>
+            
+            <% 
+            if(jogo[i].ds_perfil == "Professor"){
+              
+              var valorprof = cont++;
+            }
+            
+            %>
+          <% }%>
+          <h3>  <%=valorprof+1;%> </h3>
+          <p>Quantidade de Professores cadastrado</p>
         </div>
         <div class="icon">
           <i class="ion ion-pie-graph"></i>
@@ -31,137 +57,182 @@
 
 
 
+<section class="col-md-6">
 
+<!-- Donut chart -->
+<div class="card card-primary card-outline">
+  <div class="card-header">
+    <h3 class="card-title">
+      <i class="far fa-chart-bar"></i>
+      Donut Chart
+    </h3>
 
-
-
-    <div class="card">
-      <div class="card-header">
-        <h5 class="card-title">Monthly Recap Report</h5>
-
-        <div class="card-tools">
-          <button type="button" class="btn btn-tool" data-card-widget="collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-          <div class="btn-group">
-            <button type="button" class="btn btn-tool dropdown-toggle" data-toggle="dropdown">
-              <i class="fas fa-wrench"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right" role="menu">
-              <a href="#" class="dropdown-item">Action</a>
-              <a href="#" class="dropdown-item">Another action</a>
-              <a href="#" class="dropdown-item">Something else here</a>
-              <a class="dropdown-divider"></a>
-              <a href="#" class="dropdown-item">Separated link</a>
-            </div>
-          </div>
-          <button type="button" class="btn btn-tool" data-card-widget="remove">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-      <!-- /.card-header -->
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-8">
-            <p class="text-center">
-              <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
-            </p>
-
-            <div class="chart">
-              <!-- Sales Chart Canvas -->
-              <canvas id="salesChart" height="180" style="height: 180px;"></canvas>
-            </div>
-            <!-- /.chart-responsive -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-4">
-            <p class="text-center">
-              <strong>Goal Completion</strong>
-            </p>
-
-            <div class="progress-group">
-              Add Products to Cart
-              <span class="float-right"><b>160</b>/200</span>
-              <div class="progress progress-sm">
-                <div class="progress-bar bg-primary" style="width: 80%"></div>
-              </div>
-            </div>
-            <!-- /.progress-group -->
-
-            <div class="progress-group">
-              Complete Purchase
-              <span class="float-right"><b>310</b>/400</span>
-              <div class="progress progress-sm">
-                <div class="progress-bar bg-danger" style="width: 75%"></div>
-              </div>
-            </div>
-
-            <!-- /.progress-group -->
-            <div class="progress-group">
-              <span class="progress-text">Visit Premium Page</span>
-              <span class="float-right"><b>480</b>/800</span>
-              <div class="progress progress-sm">
-                <div class="progress-bar bg-success" style="width: 60%"></div>
-              </div>
-            </div>
-
-            <!-- /.progress-group -->
-            <div class="progress-group">
-              Send Inquiries
-              <span class="float-right"><b>250</b>/500</span>
-              <div class="progress progress-sm">
-                <div class="progress-bar bg-warning" style="width: 50%"></div>
-              </div>
-            </div>
-            <!-- /.progress-group -->
-          </div>
-          <!-- /.col -->
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- ./card-body -->
-      <div class="card-footer">
-        <div class="row">
-          <div class="col-sm-3 col-6">
-            <div class="description-block border-right">
-              <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 17%</span>
-              <h5 class="description-header">$35,210.43</h5>
-              <span class="description-text">TOTAL REVENUE</span>
-            </div>
-            <!-- /.description-block -->
-          </div>
-          <!-- /.col -->
-          <div class="col-sm-3 col-6">
-            <div class="description-block border-right">
-              <span class="description-percentage text-warning"><i class="fas fa-caret-left"></i> 0%</span>
-              <h5 class="description-header">$10,390.90</h5>
-              <span class="description-text">TOTAL COST</span>
-            </div>
-            <!-- /.description-block -->
-          </div>
-          <!-- /.col -->
-          <div class="col-sm-3 col-6">
-            <div class="description-block border-right">
-              <span class="description-percentage text-success"><i class="fas fa-caret-up"></i> 20%</span>
-              <h5 class="description-header">$24,813.53</h5>
-              <span class="description-text">TOTAL PROFIT</span>
-            </div>
-            <!-- /.description-block -->
-          </div>
-          <!-- /.col -->
-          <div class="col-sm-3 col-6">
-            <div class="description-block">
-              <span class="description-percentage text-danger"><i class="fas fa-caret-down"></i> 18%</span>
-              <h5 class="description-header">1200</h5>
-              <span class="description-text">GOAL COMPLETIONS</span>
-            </div>
-            <!-- /.description-block -->
-          </div>
-        </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.card-footer -->
+    <div class="card-tools">
+      <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+      </button>
+      <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+      </button>
     </div>
-    <!-- /.card -->
   </div>
+  <div class="card-body">
+    <div id="donut-chart" style="height: 300px;"></div>
+  </div>
+  <!-- /.card-body-->
+</div>
+</section>
+
+
+
+
+<section class="col-md-6">
+  <!-- USERS LIST -->
+  <div class="card">
+    <div class="card-header">
+      <h3 class="card-title">Latest Members</h3>
+
+      <div class="card-tools">
+        <span class="badge badge-danger">
+          <% var cont = 0;%>
+          <% for(var i = 0; i < jogo.length; i++) { %>
+            <% 
+              var valortotal = cont++;
+          %> 
+          <% } %>
+          <%valortotal+1%> Usuários
+          
+        </span>
+        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body p-0">
+      <ul class="users-list clearfix">
+        <li>
+          <img src="dist/img/user1-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Alexander Pierce</a>
+          <span class="users-list-date">Today</span>
+        </li>
+        <li>
+          <img src="dist/img/user8-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Norman</a>
+          <span class="users-list-date">Yesterday</span>
+        </li>
+        <li>
+          <img src="dist/img/user7-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Jane</a>
+          <span class="users-list-date">12 Jan</span>
+        </li>
+        <li>
+          <img src="dist/img/user6-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">John</a>
+          <span class="users-list-date">12 Jan</span>
+        </li>
+        <li>
+          <img src="dist/img/user2-160x160.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Alexander</a>
+          <span class="users-list-date">13 Jan</span>
+        </li>
+        <li>
+          <img src="dist/img/user5-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Sarah</a>
+          <span class="users-list-date">14 Jan</span>
+        </li>
+        <li>
+          <img src="dist/img/user4-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Nora</a>
+          <span class="users-list-date">15 Jan</span>
+        </li>
+        <li>
+          <img src="dist/img/user3-128x128.jpg" alt="User Image">
+          <a class="users-list-name" href="#">Nadia</a>
+          <span class="users-list-date">15 Jan</span>
+        </li>
+      </ul>
+      <!-- /.users-list -->
+    </div>
+    <!-- /.card-body -->
+    <div class="card-footer text-center">
+      <a href="javascript::">View All Users</a>
+    </div>
+    <!-- /.card-footer -->
+  </div>
+
+
+
+<script src="fontawesome-free-5.12.0-web/plugins/flot-old/jquery.flot.pie.min.js"></script>
+
+<script src="fontawesome-free-5.12.0-web/plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI -->
+<script src="fontawesome-free-5.12.0-web/plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="fontawesome-free-5.12.0-web/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="fontawesome-free-5.12.0-web/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="fontawesome-free-5.12.0-web/dist/js/demo.js"></script>
+<!-- FLOT CHARTS -->
+<script src="fontawesome-free-5.12.0-web/plugins/flot/jquery.flot.js"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="fontawesome-free-5.12.0-web/plugins/flot-old/jquery.flot.resize.min.js"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="fontawesome-free-5.12.0-web/plugins/flot-old/jquery.flot.pie.min.js"></script>
+<!-- Page script -->
+<script>  
+
+  $(function () {
+    
+     /*
+     * DONUT CHART
+     * -----------
+     */  
+     var donutData = [
+      {
+        label: 'Homens',
+        data :  20,
+        color: '#3c8dbc'
+      },
+      {
+        label: 'Series3',
+        data : 50,
+        color: '#0073b7'
+      }
+    ]
+    $.plot('#donut-chart', donutData, {
+      series: {
+        pie: {
+          show       : true,
+          radius     : 1,
+          innerRadius: 0.5,
+          label      : {
+            show     : true,
+            radius   : 2 / 3,
+            formatter: labelFormatter,
+            threshold: 0.1
+          }
+
+        }
+      },
+      legend: {
+        show: false
+      }
+    })
+    /*
+     * END DONUT CHART
+     */
+
+  })
+
+  /*
+   * Custom Label formatter
+   * ----------------------
+   */
+  function labelFormatter(label, series) {
+    return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+      + label
+      + '<br>'
+      + Math.round(series.percent) + '%</div>'
+  }
+</script>

@@ -9,6 +9,7 @@ module.exports.cadastrar = function(application, req, res){
 	req.assert('nm_adm', 'Nome não pode ser vazio').notEmpty();
 	req.assert('ds_email', 'Usuário não pode ser vazio').notEmpty();
 	req.assert('cd_senha', 'Senha não pode ser vazio').notEmpty();
+	req.assert('arquivo', 'Adicione uma imagem').notEmpty();
 	
 
 	var erros = req.validationErrors();

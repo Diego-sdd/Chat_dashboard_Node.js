@@ -1,0 +1,96 @@
+.navTop{
+    background-color: rgba(45, 56, 60, 0.924);
+    width: 100%;
+  color: rgb(255, 255, 255) !important;
+}
+.navbottom{
+    background-color: rgba(4, 211, 97, 0.671);
+    width: 100%;
+}
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vertical-offset-80 {
+    padding-top: 80px;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+.input-group{
+   
+}
+
+.linha_usuario{
+    display: block;
+    margin-top:10px;
+    padding:5px;
+}
+.linha_usuario img{
+    margin-right:5px;
+    margin-top:-7px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.conversa{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.participantes{
+	margin-top:70px;
+	margin-bottom: 70px;
+}
+
+.participante{
+	display:block;
+	margin-bottom:15px;
+}
+
+.participante img{
+	margin-top:-10px;
+}
+.dialogo{
+	width:100%;
+	height:auto;
+    margin-bottom:15px;
+	padding:4px;
+    background:rgba(34, 45, 50, 0.945);
+    color:white;
+}
+#enviar_mensagem{
+    margin-right: 70px;
+    background-color:rgba(34, 45, 50, 0.945);
+    color:white;
+}
+.campo-mensagem{
+   
+    border-radius: 10px;
+
+}
+.dialogo h4{
+	font-size:15px;
+	font-weight: bold;
+    color:rgb(255, 255, 255); 
+    color:white;
+}
+
+.dialogo p{
+	font-size:20px;
+	padding-left:15px;
+	color:rgb(255, 255, 255);
+}
